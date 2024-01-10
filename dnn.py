@@ -60,3 +60,13 @@ sample_results = results_df.sample(5)
 
 print("Sample of Actual and Predicted Ratings:")
 print(sample_results)
+
+plt.figure(figsize=(10, 6))
+plt.scatter(y_train, y_train_pred, alpha=0.25, label='Train', color='blue')
+plt.scatter(y_test, y_test_pred, alpha=0.25, label='Test', color='orange')
+plt.title('Actual vs. Predicted Ratings')
+plt.xlabel('Actual Ratings')
+plt.ylabel('Predicted Ratings')
+plt.legend()
+plt.grid(True)
+plt.show()
